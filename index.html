@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flowtea — Marcela Nako</title>
+  <meta name="description" content="Flowtea: iniciativa de Marcela Nako para apoiar pessoas autistas a expressarem emoções por meio da música." />
+  <meta name="theme-color" content="#10131b" />
+  <style>
+    :root{
+      --bg:#0f1218; --card:#151a23; --text:#e9edf6; --muted:#aab1c6;
+      --accent:#8ab4ff; --accent2:#ff7db3; --line:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:system-ui,-apple-system,'Segoe UI',Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+      background:
+        radial-gradient(900px 500px at 12% -10%, #1a2130 0%, transparent 60%),
+        radial-gradient(700px 400px at 100% 0%, #1c1422 0%, transparent 60%),
+        var(--bg);
+      color:var(--text); line-height:1.7;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px; margin:0 auto; padding:24px}
+    .nav{display:flex; justify-content:space-between; align-items:center; gap:12px; padding:14px 0}
+    .brand{font-weight:800; letter-spacing:.2px}
+    .cta{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{display:inline-block; padding:12px 16px; border-radius:12px; background:var(--accent); color:#0a0d13; font-weight:700}
+    .btn.secondary{background:var(--accent2); color:#140a0d}
+    .btn.ghost{background:transparent; border:1px solid var(--line); color:var(--text)}
+    .hero{display:grid; grid-template-columns:1.1fr 1fr; gap:28px; align-items:center; padding:18px 0 8px}
+    .hero h1{font-size:clamp(28px,4vw,44px); line-height:1.15; margin:0 0 8px}
+    .hero p{color:var(--muted); margin:0 0 18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+          border:1px solid var(--line); border-radius:18px; padding:18px}
+    .pill{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px;
+          border:1px solid var(--line); background:rgba(255,255,255,.05); color:var(--text); font-size:.92rem}
+    .section{padding:30px 0}
+    .grid3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
+    .grid2{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px}
+    .muted{color:var(--muted)}
+    .avatar{
+      width:100%; aspect-ratio:1/1; border-radius:18px; object-fit:cover; border:1px solid var(--line);
+      background:#0c0f14;
+    }
+    .tag{display:inline-block; padding:4px 10px; border-radius:999px; background:rgba(138,180,255,.14); color:#cfe0ff; font-size:.85rem; margin-right:6px}
+    footer{padding:26px 0; color:var(--muted); border-top:1px solid var(--line); margin-top:28px; text-align:center}
+    .social-links a { color: var(--accent); margin: 0 6px; }
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid3{grid-template-columns:1fr} .grid2{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="brand">🎧 Flowtea</div>
+      <div class="cta">
+        <a class="btn ghost" href="https://maabenako.github.io/flowtea-privacy/" target="_blank" rel="noopener">Política de Privacidade</a>
+        <a class="btn ghost" href="https://maabenako.github.io/flowtea-delete/" target="_blank" rel="noopener">Excluir conta</a>
+        <a class="btn" href="#" aria-label="Link da Play Store (em breve)">Baixar na Play Store</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <span class="pill">Projeto de pesquisa • Acessibilidade emocional</span>
+        <h1>Marcela Nako é desenvolvedora e idealizadora do Flowtea</h1>
+        <p>O Flowtea nasceu como uma iniciativa pessoal para ajudar pessoas com autismo a <b>comunicarem melhor seus sentimentos por meio da música</b>. Hoje integra meu projeto de mestrado, com foco em acessibilidade, acompanhamento de humor e suporte por IA.</p>
+        <div class="cta">
+          <a class="btn secondary" href="#sobre">Conheça a visão</a>
+          <a class="btn ghost" href="#recursos">Recursos</a>
+        </div>
+      </div>
+      <div class="card">
+        <img class="avatar" src="assets/marcela.jpg" alt="Foto de Marcela Nako, idealizadora do Flowtea (placeholder)">
+        <p class="muted" style="margin-top:10px">Foto ilustrativa. Substitua por <code>assets/marcela.jpg</code> para exibir aqui.</p>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section">
+      <div class="card">
+        <h2 style="margin:0 0 6px">Por que o Flowtea?</h2>
+        <p class="muted" style="margin:0">
+          Muitas pessoas autistas têm vivências emocionais intensas e, ao mesmo tempo, barreiras de comunicação. A música abre caminhos. O Flowtea transforma canções em <b>pontes de expressão</b>, permitindo registrar emoções em contexto, selecionar trechos de letras que representam o momento e compartilhar isso com quem cuida.
+        </p>
+      </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section id="recursos" class="section">
+      <h2 style="margin:0 0 12px">O que o Flowtea oferece</h2>
+      <div class="grid3">
+        <div class="card">
+          <span class="tag">Acessibilidade</span>
+          <h3 style="margin:6px 0">Comunicação facilitada</h3>
+          <p class="muted">Interface clara, leitura confortável e opção de <b>transcrição por voz</b>. O áudio é usado apenas para gerar texto e é descartado após a transcrição.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Música</span>
+          <h3 style="margin:6px 0">Trechos que viram memória</h3>
+          <p class="muted">Integração com Spotify e exibição de letras via Musixmatch. Selecione <b>trechos significativos</b> e conecte com o que você sente.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Bem-estar</span>
+          <h3 style="margin:6px 0">Humor e rotina</h3>
+          <p class="muted">Registro diário de humor e notas rápidas. Visualize padrões ao longo do tempo.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Cuidado</span>
+          <h3 style="margin:6px 0">Compartilhe com profissionais</h3>
+          <p class="muted">Facilite <b>comunicação com terapeutas</b>: entradas organizadas, contexto musical e sentimentos claros.</p>
+        </div>
+        <div class="card">
+          <span class="tag">IA de apoio</span>
+          <h3 style="margin:6px 0">Sugestões com empatia</h3>
+          <p class="muted">Apoio por IA para organizar registros e encontrar padrões — sempre com transparência e respeito à privacidade.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Privacidade</span>
+          <h3 style="margin:6px 0">Controle de dados</h3>
+          <p class="muted">Dados criptografados em trânsito. Política clara e <b>exclusão de conta</b> sob demanda.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PESQUISA/ÉTICA -->
+    <section class="section">
+      <div class="grid2">
+        <div class="card">
+          <h3 style="margin:6px 0">Parte do meu mestrado</h3>
+          <p class="muted">O Flowtea integra minha pesquisa de pós-graduação, com foco em <b>acessibilidade digital</b> e <b>expressão emocional mediada por música</b>.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin:6px 0">Compromisso ético</h3>
+          <p class="muted">Respeitamos sua privacidade. Saiba mais em <a href="https://maabenako.github.io/flowtea-privacy/" target="_blank" rel="noopener">Política de Privacidade</a> e solicite exclusão em <a href="https://maabenako.github.io/flowtea-delete/" target="_blank" rel="noopener">Excluir conta</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section">
+      <div class="card">
+        <h2 style="margin:0 0 8px">Fale comigo</h2>
+        <p class="muted" style="margin:0">
+          Quer participar da pesquisa, sugerir melhorias ou apoiar o projeto?
+          Escreva para <a href="mailto:nakotech.suporte@gmail.com">nakotech.suporte@gmail.com</a>.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© 2025 Flowtea — criado por Marcela Nako</div>
+      <div class="social-links" style="margin-top:8px;">
+        <a href="https://www.linkedin.com/in/marcelaabe-alvim/" target="_blank" rel="noopener">💼 LinkedIn</a> • 
+        <a href="https://tiktok.com/@n4kinha" target="_blank" rel="noopener">🎵 TikTok</a> • 
+        <a href="https://github.com/maabenako" target="_blank" rel="noopener">🐱 GitHub</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
