@@ -30,6 +30,7 @@
     .btn{display:inline-block; padding:12px 16px; border-radius:12px; background:var(--accent); color:#0a0d13; font-weight:700}
     .btn.secondary{background:var(--accent2); color:#140a0d}
     .btn.ghost{background:transparent; border:1px solid var(--line); color:var(--text)}
+    .btn:hover{filter:brightness(1.05)}
     .hero{display:grid; grid-template-columns:1.1fr 1fr; gap:28px; align-items:center; padding:18px 0 8px}
     .hero h1{font-size:clamp(28px,4vw,44px); line-height:1.15; margin:0 0 8px}
     .hero p{color:var(--muted); margin:0 0 18px}
@@ -41,10 +42,16 @@
     .grid3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px}
     .grid2{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px}
     .muted{color:var(--muted)}
+
+    /* Avatar redondinho com sombra */
+    .avatar-wrap{display:flex; justify-content:center}
     .avatar{
-      width:100%; aspect-ratio:1/1; border-radius:18px; object-fit:cover; border:1px solid var(--line);
+      width:100%; max-width:340px; aspect-ratio:1/1; border-radius:50%;
+      object-fit:cover; border:1px solid var(--line);
+      box-shadow: 0 12px 28px rgba(0,0,0,.35);
       background:#0c0f14;
     }
+
     .tag{display:inline-block; padding:4px 10px; border-radius:999px; background:rgba(138,180,255,.14); color:#cfe0ff; font-size:.85rem; margin-right:6px}
     footer{padding:26px 0; color:var(--muted); border-top:1px solid var(--line); margin-top:28px; text-align:center}
     .social-links a { color: var(--accent); margin: 0 6px; }
@@ -73,9 +80,8 @@
           <a class="btn ghost" href="#recursos">Recursos</a>
         </div>
       </div>
-      <div class="card">
-        <img class="avatar" src="assets/marcela.jpg" alt="Foto de Marcela Nako, idealizadora do Flowtea (placeholder)">
-        <p class="muted" style="margin-top:10px">Foto ilustrativa. Substitua por <code>assets/marcela.jpeg</code> para exibir aqui.</p>
+      <div class="card avatar-wrap">
+        <img class="avatar" src="assets/marcela.jpeg" loading="lazy" alt="Foto de Marcela Nako, idealizadora do Flowtea">
       </div>
     </section>
 
@@ -162,4 +168,3 @@
   </div>
 </body>
 </html>
-
